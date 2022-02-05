@@ -21,4 +21,16 @@
 ## 리듀서 (Reducer)
 
 - 액션을 주면, 그 액션이 적용되어 달라진(안 달라질수도?) 결과를 만들어줌.
-- 그냥 함수(pure function)
+- 그냥 함수(pure function, Immutable)
+- function 리듀서(previousState, action) {
+  return newState;
+  }
+- 액션을 받아서 스테이트를 리턴하는 구조 (인자로 들어오는 previousState와 리턴되는 newState는 다른 참조를 가지도록 해야한다.)
+
+## 스토어 (Store)
+
+- const store = createStore(리듀서);
+- store.getState() // 현재 스토어 상태 가져오기
+- store.dispatch(액션) // 액션을 인자로 넣어 상태를 변화시킴
+- store.subscribe(()=> {}) // 스토어 상태가 변경되면 subscribe 내부의 함수를 실행.
+- store.replaceReducer(다른 리듀서)
