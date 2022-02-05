@@ -34,3 +34,8 @@
 - store.dispatch(액션) // 액션을 인자로 넣어 상태를 변화시킴
 - store.subscribe(()=> {}) // 스토어 상태가 변경되면 subscribe 내부의 함수를 실행.
 - store.replaceReducer(다른 리듀서)
+
+## combineReducers
+
+- 리듀서가 많아질수록 코드 길이가 길어지며 복잡해진다!
+- 이 때 combineReducers를 활용해 리듀서들을 파일별로 잘게 나누어 합쳐주어 관리를 용이하게 한다.
